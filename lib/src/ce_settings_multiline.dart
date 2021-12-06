@@ -34,7 +34,7 @@ class CESettingsMultiline extends CESettingsItemBase {
           ),
         Expanded(
           child: Container(
-            height: 84,
+            height: 80,
             decoration: BoxDecoration(
               border: !lastItem
                   ? const Border(
@@ -54,14 +54,16 @@ class CESettingsMultiline extends CESettingsItemBase {
                     children: [
                       Text(
                         mainText,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 22.0,
-                        ),
+                        style: CupertinoTheme.of(context)
+                            .textTheme
+                            .textStyle
+                            .copyWith(fontSize: 22.0),
                       ),
                       Text(
                         subText,
-                        style: const TextStyle(fontSize: 15.0),
+                        style: CupertinoTheme.of(context)
+                            .textTheme
+                            .tabLabelTextStyle,
                       ),
                     ],
                   ),

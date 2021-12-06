@@ -32,7 +32,7 @@ class CESettingsItem extends CESettingsItemBase {
           ),
         Expanded(
           child: Container(
-            height: 52,
+            height: 44,
             decoration: BoxDecoration(
               border: !lastItem
                   ? const Border(
@@ -53,8 +53,8 @@ class CESettingsItem extends CESettingsItemBase {
                           borderRadius: BorderRadius.circular(90.0),
                           color: CupertinoColors.systemRed,
                         ),
-                        width: 26,
-                        height: 26,
+                        width: 22,
+                        height: 22,
                       ),
                       Text(badgeCount.toString(),
                           style: const TextStyle(color: CupertinoColors.white)),

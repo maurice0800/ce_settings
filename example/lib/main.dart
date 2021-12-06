@@ -13,6 +13,7 @@ class CESettingsExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CupertinoApp(
+      theme: CupertinoThemeData(brightness: Brightness.light),
       home: CESettingsExampleHome(),
     );
   }
@@ -24,12 +25,12 @@ class CESettingsExampleHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      backgroundColor: const Color.fromARGB(255, 242, 242, 242),
+      backgroundColor: CupertinoColors.systemGroupedBackground,
       child: CustomScrollView(
         slivers: [
           const CupertinoSliverNavigationBar(
             largeTitle: Text("Settings"),
-            backgroundColor: Color.fromARGB(255, 242, 242, 242),
+            backgroundColor: CupertinoColors.systemGroupedBackground,
             border: null,
           ),
           SliverToBoxAdapter(

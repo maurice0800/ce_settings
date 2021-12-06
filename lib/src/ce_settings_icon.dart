@@ -17,10 +17,10 @@ class CESettingsIcon extends StatelessWidget {
             borderRadius: BorderRadius.circular(6.0),
             color: color,
           ),
-          width: 34,
-          height: 34,
+          width: 28,
+          height: 28,
         ),
-        Icon(icon, color: CupertinoColors.white),
+        Icon(icon, color: CupertinoColors.white, size: 21),
       ],
     );
   }
