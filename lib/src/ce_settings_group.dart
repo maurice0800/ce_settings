@@ -1,8 +1,8 @@
-import 'package:ce_settings/src/ce_settings_item.dart';
+import 'package:ce_settings/src/ce_settings_item_base.dart';
 import 'package:flutter/cupertino.dart';
 
 class CESettingsGroup extends StatelessWidget {
-  final List<CESettingsItem> items;
+  final List<CESettingsItemBase> items;
 
   const CESettingsGroup({Key? key, required this.items}) : super(key: key);
 

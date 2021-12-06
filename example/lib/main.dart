@@ -37,7 +37,7 @@ class CESettingsExampleHome extends StatelessWidget {
               groups: [
                 CESettingsGroup(
                   items: [
-                    CESettingsItem(
+                    CESettingsMultiline(
                       leading: Stack(
                         alignment: AlignmentDirectional.center,
                         children: [
@@ -56,45 +56,37 @@ class CESettingsExampleHome extends StatelessWidget {
                           ),
                         ],
                       ),
-                      middle: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: const [
-                            Text(
-                              "Flutter Dash",
-                              style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 22.0,
-                              ),
-                            ),
-                            Text("Apple ID, iCloud, Media & Purchases",
-                                style: TextStyle(fontSize: 15.0)),
-                          ]),
-                      doubleLine: true,
-                    )
+                      mainText: "Flutter Dash",
+                      subText: "Apple ID, iCloud, Media & Purchases",
+                    ),
+                    const CESettingsItem(
+                      text: "Apple-ID recommendations",
+                      badgeCount: 1,
+                      lastItem: true,
+                    ),
                   ],
                 ),
                 CESettingsGroup(
                   items: [
                     CESettingsItem(
-                        leading: const CESettingsIcon(
-                          icon: CupertinoIcons.airplane,
-                          color: CupertinoColors.activeOrange,
-                        ),
-                        middle: const Text(
-                          "Airplane Mode",
-                          style: TextStyle(fontSize: 18),
-                        ),
-                        trailing: CupertinoSwitch(
-                            value: false, onChanged: (value) {})),
+                      leading: const CESettingsIcon(
+                        icon: CupertinoIcons.airplane,
+                        color: CupertinoColors.activeOrange,
+                      ),
+                      text: "Airplane Mode",
+                      trailing:
+                          CupertinoSwitch(value: false, onChanged: (value) {}),
+                      showChevron: false,
+                    ),
                     const CESettingsItem(
                       leading: CESettingsIcon(
                         icon: CupertinoIcons.wifi,
                         color: CupertinoColors.activeBlue,
                       ),
-                      middle: Text(
-                        "Wi-Fi",
-                        style: TextStyle(fontSize: 18),
+                      text: "Wi-Fi",
+                      trailing: Text(
+                        "Google WiFi",
+                        style: TextStyle(color: CupertinoColors.inactiveGray),
                       ),
                     ),
                     const CESettingsItem(
@@ -102,9 +94,10 @@ class CESettingsExampleHome extends StatelessWidget {
                         icon: CupertinoIcons.bluetooth,
                         color: CupertinoColors.activeBlue,
                       ),
-                      middle: Text(
-                        "Bluetooth",
-                        style: TextStyle(fontSize: 18),
+                      text: "Bluetooth",
+                      trailing: Text(
+                        "Enabled",
+                        style: TextStyle(color: CupertinoColors.inactiveGray),
                       ),
                     ),
                     const CESettingsItem(
@@ -112,10 +105,7 @@ class CESettingsExampleHome extends StatelessWidget {
                         icon: CupertinoIcons.antenna_radiowaves_left_right,
                         color: CupertinoColors.activeGreen,
                       ),
-                      middle: Text(
-                        "Cellular",
-                        style: TextStyle(fontSize: 18),
-                      ),
+                      text: "Cellular",
                       lastItem: true,
                     )
                   ],
@@ -127,40 +117,28 @@ class CESettingsExampleHome extends StatelessWidget {
                         icon: CupertinoIcons.app_badge,
                         color: CupertinoColors.systemRed,
                       ),
-                      middle: Text(
-                        "Notifications",
-                        style: TextStyle(fontSize: 18),
-                      ),
+                      text: "Notifications",
                     ),
                     CESettingsItem(
                       leading: CESettingsIcon(
                         icon: CupertinoIcons.speaker_3_fill,
                         color: CupertinoColors.systemRed,
                       ),
-                      middle: Text(
-                        "Sounds & Haptics",
-                        style: TextStyle(fontSize: 18),
-                      ),
+                      text: "Sounds & Haptics",
                     ),
                     CESettingsItem(
                       leading: CESettingsIcon(
                         icon: CupertinoIcons.moon_fill,
                         color: CupertinoColors.systemIndigo,
                       ),
-                      middle: Text(
-                        "Focus",
-                        style: TextStyle(fontSize: 18),
-                      ),
+                      text: "Focus",
                     ),
                     CESettingsItem(
                       leading: CESettingsIcon(
                         icon: CupertinoIcons.hourglass,
                         color: CupertinoColors.systemIndigo,
                       ),
-                      middle: Text(
-                        "Screen Time",
-                        style: TextStyle(fontSize: 18),
-                      ),
+                      text: "Screen Time",
                       lastItem: true,
                     )
                   ],
@@ -172,49 +150,35 @@ class CESettingsExampleHome extends StatelessWidget {
                         icon: CupertinoIcons.settings,
                         color: CupertinoColors.inactiveGray,
                       ),
-                      middle: Text(
-                        "General",
-                        style: TextStyle(fontSize: 18),
-                      ),
+                      text: "General",
                     ),
                     CESettingsItem(
                       leading: CESettingsIcon(
                         icon: CupertinoIcons.switch_camera,
                         color: CupertinoColors.inactiveGray,
                       ),
-                      middle: Text(
-                        "Control Center",
-                        style: TextStyle(fontSize: 18),
-                      ),
+                      text: "Control Center",
                     ),
                     CESettingsItem(
                       leading: CESettingsIcon(
                         icon: CupertinoIcons.list_bullet_below_rectangle,
                         color: CupertinoColors.systemBlue,
                       ),
-                      middle: Text(
-                        "Display & Brightness",
-                        style: TextStyle(fontSize: 18),
-                      ),
+                      text: "Display & Brightness",
                     ),
                     CESettingsItem(
-                        leading: CESettingsIcon(
-                          icon: CupertinoIcons.hourglass,
-                          color: CupertinoColors.systemBlue,
-                        ),
-                        middle: Text(
-                          "Home Screen",
-                          style: TextStyle(fontSize: 18),
-                        )),
+                      leading: CESettingsIcon(
+                        icon: CupertinoIcons.hourglass,
+                        color: CupertinoColors.systemBlue,
+                      ),
+                      text: "Home Screen",
+                    ),
                     CESettingsItem(
                       leading: CESettingsIcon(
                         icon: CupertinoIcons.at_circle,
                         color: CupertinoColors.systemBlue,
                       ),
-                      middle: Text(
-                        "Accessibility",
-                        style: TextStyle(fontSize: 18),
-                      ),
+                      text: "Accessibility",
                       lastItem: true,
                     ),
                   ],
