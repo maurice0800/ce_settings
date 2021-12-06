@@ -1,0 +1,5 @@
+**/example/*
+**/doc/*
+**/analysis_options.yaml
+**/ce_settings.iml
+**/test/*
