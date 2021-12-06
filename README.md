@@ -11,29 +11,65 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# Modern looking settings page in iOS 15 style!
+
+<table>
+  <tr>
+    <td><img src="https://github.com/maurice0800/ce_settings/blob/main/docs/screen_bright.png?raw=true" alt="Light mode" width="250"></td>
+    <td><img src="https://github.com/maurice0800/ce_settings/blob/main/docs/screen_dark.png?raw=true" alt="Dark mode" width="250"></td>
+  </tr>
+</table>
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Supports light mode and dark mode
+- Support for notification badges
+- Designed to look as close to the original settings page as possible
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Install dependency:
+```yaml
+dependencies:
+  ce_settings: [VERSION]
+```
+
+Use dependency:
+```dart
+import 'package:ce_settings/ce_settings.dart';
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+There are 3 main components you have to use:
+- `CESettingsContainer`: This wraps all the groups and applies padding to the sides
+- `CESettingsGroup`: This will wrap your items in a group and applies padding and rounded borders
+- `CESettingsItem` and `CESettingsMultiline`: These are the actual items which you can customize
+
+Example:
 
 ```dart
-const like = 'sample';
+CESettingsContainer(
+              groups: [
+                CESettingsGroup(
+                  items: [
+                    CESettingsItem(
+                      leading: const CESettingsIcon(
+                        icon: CupertinoIcons.airplane,
+                        color: CupertinoColors.activeOrange,
+                      ),
+                      text: "Airplane Mode",
+                      trailing:
+                          CupertinoSwitch(value: false, onChanged: (value) {}),
+                      showChevron: false,
+                      lastItem: true,
+                    ),
+                  ],
+                ),
+              ],
+),
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+If you find any issues, please file an issue on the projects GitHub page. You are free to contribute to this project through a pull request!
