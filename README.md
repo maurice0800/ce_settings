@@ -15,8 +15,8 @@ and the Flutter guide for
 
 <table>
   <tr>
-    <td><img src="https://github.com/maurice0800/ce_settings/blob/main/docs/screen_bright.png?raw=true" alt="Light mode" width="250"></td>
-    <td><img src="https://github.com/maurice0800/ce_settings/blob/main/docs/screen_dark.png?raw=true" alt="Dark mode" width="250"></td>
+    <td><img src="https://github.com/maurice0800/ce_settings/blob/main/doc/screen_bright.png?raw=true" alt="Light mode" width="250"></td>
+    <td><img src="https://github.com/maurice0800/ce_settings/blob/main/doc/screen_dark.png?raw=true" alt="Dark mode" width="250"></td>
   </tr>
 </table>
 
