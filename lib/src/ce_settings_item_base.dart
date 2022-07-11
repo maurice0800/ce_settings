@@ -12,6 +12,7 @@ class CESettingsItemBase extends StatelessWidget {
     this.trailing,
     this.lastItem = false,
     this.showChevron = true,
+    VoidCallback? onTap,
   }) : super(key: key);
 
   @override
